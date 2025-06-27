@@ -230,7 +230,6 @@ static async updateBooking(id, updateData, operatorId, currentUserId) {
     Object.assign(booking, updateData);
     booking.updatedAt = new Date();
 
-    // ✅ Fix: Check after updateData is merged into booking
     const isDeliveringToPay =
       booking.status === 'Delivered' &&
       booking.lrType === 'ToPay' &&
